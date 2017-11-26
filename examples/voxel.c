@@ -1,16 +1,4 @@
-#include "network.h"
-#include "cost_layer.h"
-#include "utils.h"
-#include "parser.h"
-
-#ifdef OPENCV
-#include "opencv2/highgui/highgui_c.h"
-#include "opencv2/core/version.hpp"
-#ifndef CV_VERSION_EPOCH
-#include "opencv2/videoio/videoio_c.h"
-#endif
-image get_image_from_stream(CvCapture *cap);
-#endif
+#include "darknet.h"
 
 void extract_voxel(char *lfile, char *rfile, char *prefix)
 {
