@@ -1,6 +1,27 @@
-#include "darknet.h"
-
+#include "network.h"
+#include "utils.h"
+#include "parser.h"
+#include "option_list.h"
+#include "blas.h"
+#include "classifier.h"
+#ifdef WIN32
+#include <time.h>
+#include <winsock.h>
+#include "gettimeofday.h"
+#else
 #include <sys/time.h>
+#endif
+
+
+#ifdef OPENCV
+#include "opencv2/highgui/highgui_c.h"
+#include "opencv2/core/version.hpp"
+#ifndef CV_VERSION_EPOCH
+#include "opencv2/videoio/videoio_c.h"
+#endif
+image get_image_from_stream(CvCapture *cap);
+#endif
+
 
 void demo_art(char *cfgfile, char *weightfile, int cam_index)
 {
