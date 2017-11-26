@@ -1,5 +1,5 @@
 
-darknet.exe detector test cfg/combine9k.data yolo9000.cfg yolo9000.weights data/dog.jpg
+darknet.exe detector test cfg/combine9k.data firtmodel.cfg firtmodel.weights data/1.jpg
 
 
 pause
